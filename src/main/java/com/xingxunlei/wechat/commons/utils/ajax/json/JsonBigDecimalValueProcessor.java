@@ -18,8 +18,7 @@ import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsonValueProcessor;
 
 /**
- * ClassName:JsonBigDecimalValueProcessor
- * Function:  ajax返回json格式数据时，BigDecimal类型数据格式化
+ * ajax返回json格式数据时，BigDecimal类型数据格式化
  *
  * @author   Simon
  * @version  

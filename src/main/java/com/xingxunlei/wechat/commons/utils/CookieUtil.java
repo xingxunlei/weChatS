@@ -18,8 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * ClassName:CookieUtil
- * Function: Cookie操作工具类
+ * Cookie操作工具类
  *
  * @author   Simon
  * @version  

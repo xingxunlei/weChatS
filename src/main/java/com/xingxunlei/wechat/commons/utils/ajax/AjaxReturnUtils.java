@@ -26,9 +26,8 @@ import net.sf.json.JsonConfig;
 import org.apache.log4j.Logger;
 
 /**
- * ClassName:AjaxReturnUtils
- * Function: Ajax返回值工具类
- * Reason:	 提供json格式以及html格式返回值
+ * Ajax返回值工具类
+ * </br>提供json格式以及html格式返回值
  *
  * @author   Simon
  * @version  

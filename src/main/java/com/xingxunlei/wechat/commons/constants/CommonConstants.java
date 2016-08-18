@@ -13,9 +13,8 @@
 
 package com.xingxunlei.wechat.commons.constants;
 /**
- * ClassName:CommonConstants
- * Function: 常用静态常量类
- * Reason:	 统一管理常用静态常量
+ * 常用静态常量类
+ * </br>统一管理常用静态常量
  *
  * @author   Simon
  * @version  

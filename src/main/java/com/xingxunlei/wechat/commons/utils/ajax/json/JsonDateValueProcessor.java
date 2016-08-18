@@ -20,8 +20,7 @@ import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsonValueProcessor;
 
 /**
- * ClassName:JsonDateValueProcessor
- * Function: ajax返回json格式数据时，date类型日期格式化
+ * ajax返回json格式数据时，date类型日期格式化
  *
  * @author   Simon
  * @version  

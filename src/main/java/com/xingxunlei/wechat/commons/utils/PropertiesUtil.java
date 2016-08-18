@@ -16,8 +16,7 @@ package com.xingxunlei.wechat.commons.utils;
 import java.util.ResourceBundle;
 
 /**
- * ClassName:PropertiesUtil
- * Function: Properties属性文件工具类
+ * Properties属性文件工具类
  * 
  * @author Simon
  * @version Ver 1.1

@@ -2,7 +2,7 @@
  * AsyncRetryExecutor.java
  * com.xingxunlei.wechat.commons.utils.thread
  *
- * Function： TODO 
+ * Function： 重试机制线程池
  *
  *   ver     date      		author
  * ──────────────────────────────────
@@ -17,9 +17,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * ClassName:AsyncRetryExecutor
- * Function: TODO ADD FUNCTION
- * Reason:	 TODO ADD REASON
+ * 重发机制线程池
  *
  * @author   Simon
  * @version  
@@ -29,7 +27,7 @@ import java.util.concurrent.Executors;
  * @see 	 
  */
 public class AsyncRetryExecutor {
-private static final ExecutorService executorPool = Executors.newCachedThreadPool();
+    private static final ExecutorService executorPool = Executors.newCachedThreadPool();
     
     public static void execute (RetryRunner runner) {
         executorPool.execute(runner);

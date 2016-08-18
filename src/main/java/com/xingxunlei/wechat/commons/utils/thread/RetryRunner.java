@@ -2,7 +2,7 @@
  * RetryRunner.java
  * com.xingxunlei.wechat.commons.utils.thread
  *
- * Function： TODO 
+ * Function： 重发机制Runner
  *
  *   ver     date      		author
  * ──────────────────────────────────
@@ -16,9 +16,7 @@ package com.xingxunlei.wechat.commons.utils.thread;
 import org.apache.log4j.Logger;
 
 /**
- * ClassName:RetryRunner
- * Function: TODO ADD FUNCTION
- * Reason:	 TODO ADD REASON
+ * 重发机制Runner
  *
  * @author   Simon
  * @version  

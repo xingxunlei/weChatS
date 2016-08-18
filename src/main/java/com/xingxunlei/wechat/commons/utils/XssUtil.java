@@ -15,8 +15,7 @@ package com.xingxunlei.wechat.commons.utils;
 import java.util.regex.Pattern;
 
 /**
- * ClassName:XssUtil
- * Function: XSS脚本过滤 工具类
+ * XSS脚本过滤 工具类
  *
  * @author   Simon
  * @since    Ver 1.1

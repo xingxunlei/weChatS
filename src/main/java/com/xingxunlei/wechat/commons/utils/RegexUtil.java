@@ -13,17 +13,13 @@
 
 package com.xingxunlei.wechat.commons.utils;
 
-import org.apache.log4j.Logger;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
 
 /**
- * ClassName:RegexUtil
- * Function: 常用的正则表达式工具类
+ * 常用的正则表达式工具类
  *
  * @author   Simon
  * @version  
@@ -36,7 +32,12 @@ public class RegexUtil {
     private static Logger LOG = Logger.getLogger(RegexUtil.class);
     
     /**
-     * isMobileNo:判断是否手机号码
+     * 判断是否手机号码
+     *
+     * @param  mobiles 入参
+     * @return boolean 是否正确的手机号码
+     * @throws 
+     * @since  CodingExample　Ver 1.1
      */
     public static boolean isMobileNo(String mobiles) {
         if(StringUtils.isEmpty(mobiles)){
@@ -54,7 +55,12 @@ public class RegexUtil {
     }
     
     /**
-     * isTelephone:判断是否电话号码
+     * 判断是否电话号码
+     *
+     * @param  telephone 入参
+     * @return boolean 是否正确的电话号码
+     * @throws 
+     * @since  CodingExample　Ver 1.1
      */
     public static boolean isTelephone(String telephone) {
         if(StringUtils.isEmpty(telephone)){
@@ -72,7 +78,12 @@ public class RegexUtil {
     }
     
     /**
-     * isEmail:判断是否邮箱地址
+     * 判断是否邮箱地址
+     *
+     * @param  email 入参
+     * @return boolean 是否正确的邮箱地址
+     * @throws 
+     * @since  CodingExample　Ver 1.1
      */
     public static boolean isEmail(String email) {
         if(StringUtils.isEmpty(email)){
@@ -90,7 +101,12 @@ public class RegexUtil {
     }
     
     /**
-     * isIp:判断是否IP地址
+     * 判断是否IP地址
+     *
+     * @param  ip 入参
+     * @return boolean 是否正确的IP地址
+     * @throws 
+     * @since  CodingExample　Ver 1.1
      */
     public static boolean isIp(String ip) {
         if(StringUtils.isEmpty(ip)){
@@ -108,7 +124,12 @@ public class RegexUtil {
     }
     
     /**
-     * isIDNo:判断是否身份证号码
+     * 判断是否身份证号码
+     *
+     * @param  no 入参
+     * @return boolean 是否正确的身份证号码
+     * @throws 
+     * @since  CodingExample　Ver 1.1
      */
     public static boolean isIDNo(String no) {
         if(StringUtils.isEmpty(no)){
@@ -127,24 +148,7 @@ public class RegexUtil {
     }
     
     /**
-     * isOrderId:判断是否订单号码
-     */
-    public static boolean isOrderId(String id) {
-        if(StringUtils.isEmpty(id)){
-            return false;
-        }
-        try {
-            Pattern p = Pattern.compile("^[0-9]{15}$");
-            Matcher m = p.matcher(id);
-            return m.matches();
-        } catch (Exception e) {
-            LOG.error("订单号码验证失败："+e);
-            return false;
-        }
-    }
-    
-    /**
-     * matcher:自定义正则表达式，匹配传入参数
+     * 自定义正则表达式，匹配传入参数
      *
      * @param  str     待匹配的字符串
      * @param  pattern 自定义的正则表达式
@@ -165,23 +169,12 @@ public class RegexUtil {
         }
     }
     
-    public static List<String> getImgUrlSList(String htmlStr) {
-        List<String> list = new ArrayList<String>();
-        Pattern p = Pattern.compile("<img[^>]+src\\s*=\\s*['\"]([^'\"]+)['\"][^>]*>");
-        Matcher m = p.matcher(htmlStr);
-        while(m.find()){
-            list.add(m.group(1));
-        }
-        return list;
-    }
-    
     public static void main(String[] args) {
         System.out.println(isMobileNo("18353852910"));
         System.out.println(isTelephone("021-0000000-0110"));
         System.out.println(isEmail("a@a.xx"));
         System.out.println(isIp("127.400.600.2"));
         System.out.println(isIDNo("11111111111111111"));
-        System.out.println(isOrderId("145345511721802"));
         System.out.println(matcher("a@a.xx", "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"));
     }
 
