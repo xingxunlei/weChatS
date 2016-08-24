@@ -32,7 +32,7 @@ public class UserModel extends BaseModel {
     private String isValid;
     
     private String bothLogin;
-
+    
     public String getLoginName() {
         return loginName;
     }
