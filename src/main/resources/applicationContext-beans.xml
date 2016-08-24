@@ -10,5 +10,6 @@
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
 	default-autowire="byType" default-lazy-init="false">
 	<import resource="applicationContext-db.xml" />
+	<import resource="applicationContext-shiro.xml" /> 
 </beans>
 
