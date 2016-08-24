@@ -22,13 +22,13 @@
 	<body>
 		<div class="page-container">
 			<h1>Login</h1>
-			<div class="alert alert-info">
-                Please login with your Username and Password.
-            </div>
 			<form action="" method="post">
+				<div class="alert-info">
+	                Please login with your Username and Password.
+	            </div>
 				<input type="text" name="loginName" class="username" placeholder="请输入用户名">
 				<input type="password" name="password" class="password" placeholder="请输入密码">
-				<input type="text" name="validatecode" class="validatecode" placeholder="请输入验证码">
+				<input type="text" name="validatecode" class="validatecode" maxlength="4" placeholder="请输入验证码">
 				<img src="common/validateCode.do" title="看不清换一张" class="imgvalidatecode">
 				<button type="button" class="btn_login">登 录</button>
 				<div class="error">

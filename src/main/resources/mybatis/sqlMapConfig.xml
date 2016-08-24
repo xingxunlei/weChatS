@@ -23,16 +23,16 @@
 	</settings>
 	
 	<!-- 别名配置 -->
-	<!-- 
 	<typeAliases>
-	 	<typeAlias alias="userVO" type="com.finc.bee.vo.security.UserVO" />
+	 	<typeAlias alias="userModel" type="com.xingxunlei.wechat.model.cms.security.UserModel" />
+	 	<typeAlias alias="roleModel" type="com.xingxunlei.wechat.model.cms.security.RoleModel" />
+	 	<typeAlias alias="menuModel" type="com.xingxunlei.wechat.model.cms.security.MenuModel" />
 	</typeAliases>
-	-->
 	 
 	<!-- 指定映射器路径 -->
-	<!--
 	<mappers>
-		<mapper resource="mybatis/sqlmap-mapping-user.xml" />
+		<mapper resource="mybatis/security/sqlmap-mapping-user.xml" />
+		<mapper resource="mybatis/security/sqlmap-mapping-role.xml" />
+		<mapper resource="mybatis/security/sqlmap-mapping-menu.xml" />
 	</mappers>
-	-->
 </configuration> 

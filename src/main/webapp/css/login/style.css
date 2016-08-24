@@ -170,6 +170,16 @@ button:active {
 
 }
 
+.alert-info {
+	display: none;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
 .copyright {
 	align: center;
     margin: 35px auto;

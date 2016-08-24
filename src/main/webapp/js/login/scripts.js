@@ -40,13 +40,34 @@ jQuery(document).ready(function() {
         	complete:function(XMLHttpRequest, textStatus){
         		var seponseText = XMLHttpRequest.responseText;
         		if(seponseText == "userError") {
-        			
+        			$('.alert-info').fadeOut('fast', function(){
+                        $(this).text('用户名或密码错误,请重新输入');
+                    });
+        			$('.alert-info').fadeIn('fast', function(){
+                        $(this).parent().find('.username').focus();
+                        $('.page-container .imgvalidatecode').click();
+                    });
         		} else if(seponseText == "validateError") {
-        			
-        		} else if(seponseText == "validateError") {
-        			
+        			$('.alert-info').fadeOut('fast', function(){
+                        $(this).text('验证码输入错误,请重新输入');
+                    });
+        			$('.alert-info').fadeIn('fast', function(){
+                        $(this).parent().find('.validatecode').focus();
+                        $('.page-container .imgvalidatecode').click();
+                    });
+        		} else if(seponseText == "loginSuccess") {
+        			$('.alert-info').fadeOut('fast', function(){
+                        $(this).text('登录成功');
+                    });
+        			$('.alert-info').fadeIn('fast', function(){});
         		} else {
-        			
+        			$('.alert-info').fadeOut('fast', function(){
+                        $(this).text('系统繁忙,请稍后再试');
+                    });
+        			$('.alert-info').fadeIn('fast', function(){
+                        $(this).parent().find('.validatecode').focus();
+                        $('.page-container .imgvalidatecode').click();
+                    });
         		}
         	}
         });
@@ -55,6 +76,7 @@ jQuery(document).ready(function() {
 
     $('.page-container form .username, .page-container form .password, .page-container form .validatecode').keyup(function(){
         $(this).parent().find('.error').fadeOut('fast');
+        $(this).parent().find('.alert-info').fadeOut('fast');
     });
     
     $('.page-container .imgvalidatecode').click(function(){

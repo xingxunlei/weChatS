@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xingxunlei.wechat.security.user">
+	<sql id="Base_Column_List">
+		ID, LOGIN_NAME, USER_NAME, NICK_NAME, MOBILE_PHONE, EMAIL, PASSWORD,
+		SALT, LOGIN_TIME,
+		USER_IMG, USER_SEX, USER_TYPE, IS_VALID, BOTH_LOGIN, CREATE_BY, CREATE_TIME,
+		MODIFY_BY,
+		MODIFY_TIME
+	</sql>
+	<select id="findUserByAttr" parameterType="userModel"
+		resultType="userModel">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM WECHAT_USER
+		<trim prefix="WHERE" suffixOverrides="AND">
+			<if test="id != null">
+				ID = #{id} AND
+			</if>
+			<if test="loginName != null">
+				LOGIN_NAME = #{loginName} AND
+			</if>
+			<if test="userName != null">
+				USER_NAME = #{userName} AND
+			</if>
+			<if test="nickName != null">
+				NICK_NAME = #{nickName} AND
+			</if>
+			<if test="mobilePhone != null">
+				MOBILE_PHONE = #{mobilePhone} AND
+			</if>
+			<if test="email != null">
+				EMAIL = #{email} AND
+			</if>
+			<if test="loginTime != null">
+				LOGIN_TIME = #{loginTime} AND
+			</if>
+			<if test="userImg != null">
+				USER_IMG = #{userImg} AND
+			</if>
+			<if test="userSex != null">
+				USER_SEX = #{userSex} AND
+			</if>
+			<if test="userType != null">
+				USER_TYPE = #{userType} AND
+			</if>
+			<if test="isValid != null">
+				IS_VALID = #{isValid} AND
+			</if>
+			<if test="bothLogin != null">
+				BOTH_LOGIN = #{bothLogin} AND
+			</if>
+			<if test="createBy != null">
+				CREATE_BY = #{createBy} AND
+			</if>
+			<if test="createTime != null">
+				CREATE_TIME = #{createTime} AND
+			</if>
+			<if test="modifyBy != null">
+				MODIFY_BY = #{modifyBy} AND
+			</if>
+			<if test="modifyTime != null">
+				MODIFY_TIME = #{modifyTime} AND
+			</if>
+		</trim>
+	</select>
+</mapper>
