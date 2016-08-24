@@ -13,12 +13,6 @@
 
 package com.xingxunlei.wechat.commons.utils.sign;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 import org.springside.modules.security.utils.Digests;

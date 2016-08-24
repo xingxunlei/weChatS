@@ -13,29 +13,15 @@
 
 package com.xingxunlei.wechat.commons.utils.xml;
 
-import java.io.ByteArrayOutputStream;
-
-import java.io.ByteArrayInputStream;
-
-import java.io.InputStream;
-
-import javax.xml.bind.Unmarshaller;
-
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
-
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
-
-import com.sun.xml.internal.txw2.output.XmlSerializer;
-
-import java.io.StringWriter;
-
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.OutputStream;
-
-import javax.xml.bind.Marshaller;
-
 import javax.xml.bind.JAXBContext;
-
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import org.apache.log4j.Logger;
 
 /**
