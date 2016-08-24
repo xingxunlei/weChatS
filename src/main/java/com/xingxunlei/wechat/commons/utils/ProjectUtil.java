@@ -46,12 +46,7 @@ public class ProjectUtil {
         // 格式如：0X00000064
         String threadId = String.format("%#010X", current.getId());
         StringBuilder st = new StringBuilder();
-        Subject subject = SecurityUtils.getSubject();
-        UserModel user = (UserModel) subject.getPrincipal();
         st.append("线程号：" + threadId + ";").append(sign);
-        if (user != null) {
-            st.append("用户：" + user.getLoginName() + ";");
-        }
         return st;
     }
 

@@ -135,7 +135,7 @@ public class LoginController {
     public String logOut() {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "logout";
+        return "redirect:/login.do";
     }
 
 }

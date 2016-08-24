@@ -59,7 +59,9 @@ jQuery(document).ready(function() {
         			$('.alert-info').fadeOut('fast', function(){
                         $(this).text('登录成功');
                     });
-        			$('.alert-info').fadeIn('fast', function(){});
+        			$('.alert-info').fadeIn('fast', function(){
+        				window.location.href = "login.do";
+        			});
         		} else {
         			$('.alert-info').fadeOut('fast', function(){
                         $(this).text('系统繁忙,请稍后再试');

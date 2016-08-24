@@ -13,12 +13,10 @@
 
 package com.xingxunlei.wechat.filter.shiro;
 
-import com.xingxunlei.wechat.commons.utils.ProjectUtil;
 import com.xingxunlei.wechat.model.cms.security.UserModel;
 import com.xingxunlei.wechat.service.security.UserService;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.shiro.subject.Subject;
@@ -53,7 +51,7 @@ public class CustomUserFilter extends UserFilter {
         
         //判断是否认证 
         if(!subject.isAuthenticated() || user == null) {
-            LOG.error(String.format("%s is not authen", ProjectUtil.getAccessLogInfo((HttpServletRequest)request)));
+            LOG.error("user is not authen");
             return false;
         }
         
@@ -63,7 +61,7 @@ public class CustomUserFilter extends UserFilter {
         }
         
         //可在此做 是否允许同账户多处同时登录的校验
-        UserModel user2 = userService.getByAccount(user.getUserName());
+        UserModel user2 = userService.getByAccount(user.getLoginName());
          
         //将session时间和数据库中的登录时间进行比较
         if(StringUtils.equals(user.getLoginTime().toString(), user2.getLoginTime().toString())) {
