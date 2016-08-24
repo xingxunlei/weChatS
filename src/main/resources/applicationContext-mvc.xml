@@ -19,6 +19,11 @@
 
 	<!-- 默认的注解映射的支持 -->  
     <mvc:annotation-driven />
+    
+    <!-- 拦截器配置 -->
+    <mvc:interceptors>
+       	<bean class="com.xingxunlei.wechat.interceptor.ControllerInterceptor" />
+    </mvc:interceptors>
 
 	<!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
@@ -28,12 +33,7 @@
 			</list>
 		</property>
 	</bean>
-
-	<!-- 自动扫描且只扫描@Controller -->
-	<context:component-scan base-package="com.xingxunlei.wechat.controller" use-default-filters="false">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
-	</context:component-scan>
-
+	
 	<!-- 配置json数据转换器 -->
 	<bean id="mappingJacksonHttpMessageConverter"
 		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
@@ -43,7 +43,12 @@
 			</list>
 		</property>
 	</bean>
-	
+
+	<!-- 自动扫描且只扫描@Controller -->
+	<context:component-scan base-package="com.xingxunlei.wechat.controller" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
 	<!-- 配置视图解析器，将ModelAndView及字符串解析为具体的页面 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:viewClass="org.springframework.web.servlet.view.JstlView" p:prefix="/" p:suffix=".jsp"/>
 
