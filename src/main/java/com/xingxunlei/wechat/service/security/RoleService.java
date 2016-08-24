@@ -30,7 +30,7 @@ import java.util.List;
 public interface RoleService {
 
     //根据用户查询用户权限信息
-    public List<String> getHasPermissByUser(Integer id);
+    public List<String> getHasPermissByUserID(Integer userId);
 
 }
 

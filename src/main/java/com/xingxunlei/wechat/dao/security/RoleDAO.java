@@ -12,6 +12,9 @@
 */
 
 package com.xingxunlei.wechat.dao.security;
+
+import java.util.List;
+
 /**
  * ClassName:RoleDAO
  * Function: TODO ADD FUNCTION
@@ -25,6 +28,8 @@ package com.xingxunlei.wechat.dao.security;
  * @see 	 
  */
 public interface RoleDAO {
+
+    List<String> getHasPermissByUserID(Integer userId);
 
 }
 

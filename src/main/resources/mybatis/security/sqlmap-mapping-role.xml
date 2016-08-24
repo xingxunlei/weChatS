@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xingxunlei.wechat.security.role">
+	<select id="getHasPermissByUser" parameterType="map" resultType="String">
+		SELECT P.PERMISSION
+		  FROM WECHAT_ROLE_PERMISSION P,
+		       WECHAT_USER U
+		 WHERE P.ROLE_ID = U.ROLE_ID
+		   AND U.USER_ID = #{userId}
+	</select>
 </mapper>

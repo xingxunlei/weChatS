@@ -64,7 +64,7 @@ public class ShiroDBRealm extends AuthorizingRealm {
         }
 
         // 加载用户权限
-        permissions = roleService.getHasPermissByUser(user.getId());
+        permissions = roleService.getHasPermissByUserID(user.getId());
 
         info.addStringPermissions(permissions);
         return info;

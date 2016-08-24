@@ -13,6 +13,11 @@
 
 package com.xingxunlei.wechat.dao.impl.security;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import java.util.List;
+
 import com.xingxunlei.wechat.dao.impl.BaseDAO;
 import com.xingxunlei.wechat.dao.security.RoleDAO;
 
@@ -29,6 +34,15 @@ import com.xingxunlei.wechat.dao.security.RoleDAO;
  * @see 	 
  */
 public class RoleDAOImpl extends BaseDAO implements RoleDAO {
+    
+    private static final String GET_USER_PERMISSIONS_BY_USERID = "com.xingxunlei.wechat.security.role.getHasPermissByUser";
+
+    @Override
+    public List<String> getHasPermissByUserID(Integer userId) {
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("userId", userId);
+        return sqlSession.selectList(GET_USER_PERMISSIONS_BY_USERID, map);
+    }
 
 }
 

@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
         }
         
         $.ajax({
-        	url:"/login.do",
+        	url:"login.do",
         	type:"POST",
         	data:$(this).parent().serialize(),
         	complete:function(XMLHttpRequest, textStatus){

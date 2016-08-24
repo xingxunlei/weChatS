@@ -13,6 +13,12 @@
 
 package com.xingxunlei.wechat.service.impl.security;
 
+import com.xingxunlei.wechat.dao.security.RoleDAO;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 import com.xingxunlei.wechat.service.security.RoleService;
@@ -30,13 +36,14 @@ import com.xingxunlei.wechat.service.security.RoleService;
  * @see 	 
  */
 public class RoleServiceImpl implements RoleService {
+    
+    @Autowired
+    @Qualifier("roleDAOImpl")
+    private RoleDAO roleDAO;
 
     @Override
-    public List<String> getHasPermissByUser(Integer id) {
-        
-        // TODO Auto-generated method stub
-        return null;
-        
+    public List<String> getHasPermissByUserID(Integer userId) {
+        return roleDAO.getHasPermissByUserID(userId);
     }
 
 }
