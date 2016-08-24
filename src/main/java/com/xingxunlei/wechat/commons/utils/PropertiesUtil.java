@@ -13,10 +13,6 @@
 
 package com.xingxunlei.wechat.commons.utils;
 
-import org.apache.log4j.Logger;
-
-import java.util.MissingResourceException;
-
 import java.util.ResourceBundle;
 
 /**
